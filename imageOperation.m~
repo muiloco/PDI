@@ -1,0 +1,15 @@
+a = imread('lena.jpg');
+b = rgb2gray(a); 
+imshow(b);
+c = b * 2;
+figure;
+imshow(c);
+d = c * 2;
+figure;
+imshow(d);
+[x,y] = size(b);
+maximo = b(1,1);
+minimo = b(1,1);
+for i = 1:x
+    for j = 1:y
+        if maxi
