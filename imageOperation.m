@@ -1,7 +1,6 @@
-a = imread('lena.jpg');
-b = rgb2gray(a); 
-c = b * 2;
-d = c * 2;
+colorida = imread('lena.jpg');
+original = rgb2gray(colorida); 
+c = original * 2;
 [x,y] = size(c);
 maximo = c(1,1);
 minimo = c(1,1);
@@ -16,7 +15,8 @@ for i = 1:x
     end
 end
 
-final = (255/(maximo-minimo))*(c-minimo);
-imshow(final);
+resultante = (255/(maximo-minimo))*(c-minimo);
+imshow(resultante);
+final = resultante - original;
 figure;
-imshow(c)
+imshow(final);
