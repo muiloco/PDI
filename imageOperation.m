@@ -14,9 +14,9 @@ for i = 1:x
         end
     end
 end
-
+% Opeação de Normalização da imagem
 resultante = (255/(maximo-minimo))*(c-minimo);
+
 imshow(resultante);
 final = resultante - original;
-figure;
-imshow(final);
+histogram(original);
